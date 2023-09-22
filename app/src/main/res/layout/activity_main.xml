@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#3F51B5"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Image Gallery"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/MenuFrag"
+            android:name="com.example.fragapp.MenuFrag"
+            android:layout_width="146dp"
+            android:layout_height="match_parent"
+            android:background="#3F51B5"
+            android:outlineAmbientShadowColor="#F44336"
+            android:outlineSpotShadowColor="#F44336"
+            app:layout="@layout/menu_frag"
+            tools:layout="@layout/menu_frag" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/ContentFrag"
+            android:name="com.example.fragapp.ContentFrag"
+            android:layout_width="267dp"
+            android:layout_height="match_parent"
+            android:background="#3F51B5"
+            android:outlineSpotShadowColor="#FF0000"
+            app:layout="@layout/content_frag"
+            tools:layout="@layout/content_frag" />
+    </LinearLayout>
+</LinearLayout>
